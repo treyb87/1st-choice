@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+--DarkGreen: rgb(109, 153, 28);
+--LightGreen: rgb(192, 245, 5);
+
+--DarkOrange: rgb(241, 93, 20);
+--LightOrange: rgb(255, 158, 30);
+
+--Dark: rgb(23, 2, 35);
+--Light: rgb(255, 251, 255);
+
+/* transparent colors */
+--TransDarkGreen: rgba(109, 153, 28, 0.7);
+--TransLightGreen: rgba(192, 245, 5, 0.7);
+
+--TransDarkOrange: rgba(241, 93, 20, 0.7);
+--TransLightOrange: rgba(255, 158, 30, 0.7);
+
+--TransDark: rgba(23, 2, 35, 0.7);
+--TransLight: rgba(255, 251, 255, 0.7);
+}
+html{ height: 100%;}
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    /* margin-top: auto; */
+}
+
+.hero-container{
+    grid-area: hero;
+}
+.landscape-container{
+    grid-area: landscape;
+}
+.tree-container{
+    grid-area: tree;
+}
+.maintenance-container{
+    grid-area: maintenance;
+}
+.irrigation-container{
+    grid-area: irrigation;
+}
+.sod-container{
+    grid-area: sod;
+}
+
+body{
+    background-image: url(images/grass-3.jpeg);
+    background-color: white;
+    background-image: ;
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100%; */
+}
+.main-container{
+    /* position: relative; */
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+    width: 100vw;
+    padding: 2em;
+    height: 100vh;
+    margin-bottom: 100px;
+    align-content: center;
+}
+#boxes{
+    background-color: var(--TransDarkOrange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+#card-img{
+    width: 275px;
+    border-radius: 15px;
+
+}
+.hero-container{
+    width: 100%;
+    padding: 1em;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, var(--DarkOrange), var(--LightOrange));
+    text-align: center;
+}
+.hero{
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--Dark);
+    line-height: 1.25em;
+}
+h3{
+    font-style: italic;
+    padding: 1em 0;
+    font-weight: 700;
+    color: var(--Light);
+}
+@media screen and (min-width: 800px) {
+    .main-container{
+        background-color: var(--TransLight);
+        height: auto;
+        width: auto;
+        margin: 0 3em;
+        padding: 2em;
+        display: grid;
+        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+        grid-template-areas: "hero hero hero"
+        "landscape .  tree "
+        "maintenance irrigation  sod";
+        gap: 1em;
+    }
+    .hero-container{
+        /* margin-top: 500px; */
+    }
+    #boxes{
+        margin: 0;
+        width: 300px;
+        height: 350px;
+
+    }
+    #card-img{
+       width: 200px;
+    }
+
+
+}
+
+
+
+
+
+
