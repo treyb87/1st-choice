@@ -69,11 +69,12 @@ body{
     top: 200px;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    /* overflow: auto; */
     align-items: center;
     width: 100vw;
     padding: 2em;
-    height: 100vh;
+    height: 100%;
+    margin-top: 120px;
     margin-bottom: 100px;
     align-content: center;
 }
@@ -119,6 +120,7 @@ h3{
         height: auto;
         width: auto;
         margin: 0 3em;
+        margin-top: 120px;
         padding: 2em;
         display: grid;
         grid-template-columns: 1fr, 1fr, 1fr;
